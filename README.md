@@ -6,6 +6,8 @@ SatSimJS Example
 ## Running this application
 
 ````sh
+git clone https://github.com/mixxen/satsimjs-example.git
+cd satsimjs-example
 npm install
 npm start
 ````
