@@ -1,10 +1,10 @@
 {
-  "name": "satsimjs_example",
+  "name": "satsimjs-example",
   "version": "0.0.1",
-  "description": "satSimJS Example Application",
+  "description": "SatSimJS Example Application",
   "author": {
-    "name": "SatSim JS.",
-    "url": "https://github.com/ssc-ai/satsimjs/"
+    "name": "SatSimJS Example",
+    "url": "https://github.com/ssc-ai/satsimjs-example/"
   },
   "keywords": [
     "cesium",
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ssc-ai/satsimjs/"
+    "url": "https://github.com/ssc-ai/satsimjs-example/"
   },
   "main": "app/index.js",
   "scripts": {
