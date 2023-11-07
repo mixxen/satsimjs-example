@@ -1,6 +1,7 @@
 import { Universe, createViewer, fetchTle, southEastZenithToAzEl } from "satsim";
 import { Math as CMath, JulianDate, viewerCesiumInspectorMixin, ClockRange, ClockStep, defined, Color, Cartesian3 } from "cesium";
 import "cesium/Build/Cesium/Widgets/widgets.css";
+import "cesium/Build/Cesium/Widgets/InfoBox/InfoBoxDescription.css";
 import "./index.css";
 
 
