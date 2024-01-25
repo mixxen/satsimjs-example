@@ -1,6 +1,6 @@
 {
   "name": "satsimjs-example",
-  "version": "0.2.2",
+  "version": "0.4.0",
   "description": "SatSimJS Example Application",
   "author": {
     "name": "SatSimJS Example",
@@ -49,6 +49,7 @@
     "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
-    "satsim": "^0.2.2"
+    "cesium": "^1.113.0",
+    "satsim": "^0.4.0"
   }
 }
