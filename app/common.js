@@ -1,6 +1,6 @@
 import { generateGroundObservatoryVisualizer, generateSatelliteVisualizer } from "satsim/src/engine/cesium/ObjectVisulaizer.js";
-import { Universe, createViewer, fetchTle, getVisibility, southEastZenithToAzEl } from "satsim";
-import { Math as CMath, JulianDate, viewerCesiumInspectorMixin, ClockRange, ClockStep, defined, Color, Cartesian3, defaultValue, Viewer, CallbackProperty } from "cesium";
+import { fetchTle, southEastZenithToAzEl } from "satsim";
+import { defined, Cartesian3 } from "cesium";
 
 function jsonToHtmlBullets(json, indent = 0) {
   let html = '';
