@@ -1,15 +1,21 @@
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import path from 'path';
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { fileURLToPath } from 'url';
+
 // The path to the CesiumJS source code
 const cesiumSource = 'node_modules/cesium/Source';
 const cesiumWorkers = '../Build/Cesium/Workers';
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename); // get the name of the directory
 
-module.exports = {
+const basedir = './app/'
+
+export default {
     context: __dirname,
     entry: {
-        app: './app/index.js'
+        app: basedir + 'index.js'
     },
     output: {
         filename: 'app.js',
@@ -17,7 +23,7 @@ module.exports = {
         sourcePrefix: ''
     },
     resolve: {
-        fallback: { "https": false, "zlib": false, "http": false, "url": false },
+        fallback: { "https": false, "zlib": false, "http": false, "url": false, "fs": false },
         mainFiles: ['index', 'Cesium'],
     },
     module: {
@@ -31,7 +37,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './app/index.html'
+            template: basedir + 'index.html'
         }),
         // Copy Cesium Assets, Widgets, and Workers to a static directory
         new CopyWebpackPlugin({
@@ -59,7 +65,7 @@ module.exports = {
             },
         },
         static: {
-            directory: path.resolve(__dirname, './app/assets'),
+            directory: path.resolve(__dirname, basedir + '/assets'),
             publicPath: '/assets'
         }
     }
