@@ -1,6 +1,6 @@
 {
   "name": "satsimjs-example",
-  "version": "0.4.0",
+  "version": "0.6.0",
   "description": "SatSimJS Example Application",
   "author": {
     "name": "SatSimJS Example",
@@ -14,8 +14,10 @@
     "type": "git",
     "url": "https://github.com/ssc-ai/satsimjs-example/"
   },
-  "main": "app/index.js",
+  "main": "app/app.js",
+  "type": "module",
   "scripts": {
+    "app": "node app/app.js",
     "module": "webpack --config webpack.module.js",
     "build": "webpack --config webpack.config.js",
     "watch": "webpack --config webpack.config.js --watch",
@@ -49,7 +51,7 @@
     "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
-    "cesium": "^1.113.0",
-    "satsim": "^0.4.0"
+    "cesium": "^1.115.0",
+    "satsim": "^0.6.0"
   }
 }
