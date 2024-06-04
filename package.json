@@ -51,7 +51,7 @@
     "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
-    "cesium": "^1.115.0",
+    "cesium": "^1.118.0",
     "satsim": "^0.6.0"
   }
 }

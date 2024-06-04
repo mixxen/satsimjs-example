@@ -46,6 +46,7 @@ for (let i = 0; i < count; i += 3) {
 const start = JulianDate.now();
 const end = JulianDate.addSeconds(start, 60*60, new JulianDate());
 universe.update(start);
+await new Promise(resolve => setTimeout(resolve, 500)); // wait for EOP to load
 console.log('starting simulation at', start.toString());
 
 // Run the simulation from start to end
